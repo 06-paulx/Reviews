@@ -191,7 +191,7 @@ let dbSeeding = function (query, params) {
 
 let currentQuery = Promise.resolve();
 
-for (var i = 0; i < 30000; i++) {
+for (var i = 0; i < 3000; i++) {
   let query = 'INSERT INTO reviews (user, review, listing, review_date, userphoto) VALUES (?, ?, ?, ?, ?)'
   let params = [
     getRandomName(), 

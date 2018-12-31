@@ -8,7 +8,7 @@ const connection = mysql.createConnection({
 
 const getReviews = (listingId, callback) => {
   console.log('db', listingId)
-  const query = 'SELECT * FROM reviews WHERE listing = 1'  
+  const query = 'SELECT * FROM reviews WHERE listing = ? limit 6'  
   const params = listingId
 
   connection.query(query, params, (err, data) => {

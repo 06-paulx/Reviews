@@ -1,19 +1,18 @@
 import React from 'react';
 
-export default class Reviews extends React.Component {
-  constructor() {
-    super();
 
-    this.state = {
-      user: '',
-      review: '',
-      
-    };
-  }
-
-  render() {
-    return (
-      <h1>Single Review</h1>
-    );
-  }
+function Review({review}) {
+  console.log(review)
+  return (
+    <div>
+      {review.id}
+      {review.review}
+      {review.user}
+      {review.listing}
+      {review.review_date}
+    </div>
+  )
 }
+
+export default Review;
+
