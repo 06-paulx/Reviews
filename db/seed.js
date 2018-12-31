@@ -153,17 +153,27 @@ var reviews = [
   "Vix te causae scaevola, sea no quando detracto? Pro te justo commodo sapientem, te mei idque quodsi aperiam, in per nibh veritus blandit? Assum ponderum sed at. Vocent consulatu cotidieque cu mel!"
 ]
 
-//one year in ms 
-var date = Math.floor(Math.random() * 31557065322)
+var getRandomDate = Date.now() - (Math.floor(Math.random() * 31557065322))
 
-var getRandomDate = (Date.now() - date) 
-
-var getRandomListingId = Math.floor(Math.random() * 100) + 1
-
-var userImage = ['https: //upload.wikimedia.org/wikipedia/en/6/62/Kermit_the_Frog.jpg']
+var userImage = [
+  'https://pbs.twimg.com/profile_images/2679269368/1f76752ff6e720b3a81d2d432394f989.jpeg',
+  'https://pbs.twimg.com/profile_images/378800000820194552/9438cd4f46d75e87f411be74815e57c8.jpeg',
+  'https://pbs.twimg.com/profile_images/378800000172139970/8278188842d52ba72fa4b1b010c631e8.png',
+  'https://pbs.twimg.com/profile_images/414881536752615424/0UGCpOwQ.png',
+  'https://avatarfiles.alphacoders.com/155/155717.jpg',
+  'https://pbs.twimg.com/profile_images/3340170889/2bd39c10aacc5257ea35e899cd3b38b7.png',
+  'https://pbs.twimg.com/profile_images/681986321716383745/AXiUHnBh.png',
+  'https://c-sf.smule.com/sf/s24/arr/9b/62/909824aa-14f9-4ad2-8468-16cb155e3e43.jpg',
+  'https://pbs.twimg.com/profile_images/2727518587/ebb135a8a90675ac1359864c77389338.png',
+  'https://pbs.twimg.com/profile_images/734265861926588416/ra5Ekezw_400x400.jpg',
+  'https://upload.wikimedia.org/wikipedia/en/thumb/0/02/Statler_and_Waldorf.jpg/220px-Statler_and_Waldorf.jpg',
+  'https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/Dr._Bunsen_Honeydew.jpg/220px-Dr._Bunsen_Honeydew.jpg',
+  'https: //upload.wikimedia.org/wikipedia/en/thumb/b/b5/Rowlf_the_Dog.jpg/200px-Rowlf_the_Dog.jpg',
+  'https://vignette.wikia.nocookie.net/muppet/images/a/ac/Scooter.png/revision/latest?cb=20111020174312',
+]
 
 var getRandomUserImage = () => {
-  var index = Math.floor(Math.random() * 100)
+  var index = Math.floor(Math.random() * userImage.length)
   return userImage[index]; 
 }
 
@@ -197,8 +207,8 @@ for (var i = 0; i < 3000; i++) {
     getRandomName(), 
     getRandomReview(),
     Math.floor(Math.random() * 100) + 1,
-    getRandomDate,
-    userImage[0]
+    Date.now() - (Math.floor(Math.random() * 31557065322)),
+    getRandomUserImage()
   ];
 
   currentQuery = currentQuery.then(
@@ -217,11 +227,3 @@ for (var i = 0; i < 3000; i++) {
       connection.end();
     },
   );
-/*
-id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-review VARCHAR(255) NOT NULL,
-user VARCHAR(255),
-listing INT,
-review_date date,
-userphoto VARCHAR(255)
-*/
