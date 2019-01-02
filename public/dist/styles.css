@@ -60,6 +60,7 @@ img {
 
 .profile_photo{
   float: left;
+  margin-right: 15px;
 }
 
 .user {
@@ -102,7 +103,7 @@ img {
 
 #read_more_btn {
   font-family: var(--font-font_family, Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif) !important;
-  font-size: 20px;
+  font-size: 15px;
   display: inline;
   background: transparent;
   border: 0px;
