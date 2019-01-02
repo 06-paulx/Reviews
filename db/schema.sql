@@ -1,0 +1,14 @@
+DROP DATABASE IF EXISTS Reviews; 
+
+CREATE DATABASE Reviews;
+
+USE Reviews;
+
+CREATE TABLE Reviews (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  review VARCHAR(4000) NOT NULL,
+  user VARCHAR(255),
+  listing INT,
+  review_date BIGINT, 
+  userphoto VARCHAR(500)
+);
