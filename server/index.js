@@ -4,13 +4,16 @@ const db = require('../db');
 const path = require('path');
 const app = express();
 const port = 4001
+const cors = require('cors');
 
+
+app.use(cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(express.static(path.join(__dirname, './../public/dist')));
 
-app.get('/api/listing/:listingId/reviews', (req, res) => {
+app.get('/:listingId/reviews', (req, res) => {
   console.log('listing Id', req.params.listingId)
   const listingId = req.params.listingId;
   db.getReviews(listingId, (err, reviews) => {
@@ -22,7 +25,7 @@ app.get('/api/listing/:listingId/reviews', (req, res) => {
   });
 });
 
-app.get('/listing/:listingId/reviews', (req, res) => {
+app.get('/:listingId', (req, res) => {
   res.sendFile(path.join(__dirname, '/../public/dist/index.html'));
 });
 

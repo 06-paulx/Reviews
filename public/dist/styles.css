@@ -25,7 +25,7 @@ h1 {
   padding: 15px;
 }
 
-img {
+#user-photo {
   width: auto; 
   height: auto;
   max-width: 48px;
