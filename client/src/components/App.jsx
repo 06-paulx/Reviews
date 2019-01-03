@@ -37,7 +37,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/api/listing/' + this.props.id + '/reviews')
+    fetch('http://localhost:4001/' + this.props.id + '/reviews')
     .then((response) => {
       return response.json();
     })

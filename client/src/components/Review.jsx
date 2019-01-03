@@ -50,7 +50,7 @@ class Review extends React.Component {
     if (expanded) {
       view = <div className="review">
         <div className="profile_photo">
-          <img src={this.props.review.userphoto}></img>
+          <img src={this.props.review.userphoto} id="user-photo"></img>
         </div>
         <div className="user">
           {this.props.review.user}
@@ -65,7 +65,7 @@ class Review extends React.Component {
     } else {
       view = <div className="review">
         <div className="profile_photo">
-          <img src={this.props.review.userphoto}></img>
+          <img src={this.props.review.userphoto} id="user-photo"></img>
         </div>
         <div className="user">
           {this.props.review.user}
