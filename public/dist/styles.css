@@ -1,4 +1,4 @@
-.review_container {
+.m-review_container {
   font-size: 20px;
   font-weight: 100;
   color: #484848;
@@ -19,7 +19,7 @@ h1 {
   font-weight: 800;
 }
 
-.row {
+.m-row {
   display: flex;
   flex-direction: row;
   padding: 15px;
@@ -33,7 +33,7 @@ h1 {
   border-radius: 50%;
 }
 
-.review {
+.m-review {
   float: left;
   width: 582px;
   padding-left: 8px;
@@ -42,7 +42,7 @@ h1 {
   position: relative;
 }
 
-.text {
+.m-text {
   padding-top: 20px;
   font-family: Circular,
   -apple-system,
@@ -55,15 +55,14 @@ h1 {
   font-weight: 400 !important;
   line-height: 1.375em !important;
   color: #484848 !important;
-  
 } 
 
-.profile_photo{
+.m-profile_photo{
   float: left;
   margin-right: 15px;
 }
 
-.user {
+.m-user {
   font-family: Circular,
   -apple-system,
   BlinkMacSystemFont,
@@ -78,7 +77,7 @@ h1 {
   color: #484848 !important;
 }
 
-.date {
+.m-date {
   font-family: Circular,
   -apple-system,
   BlinkMacSystemFont,
@@ -120,7 +119,7 @@ h1 {
   color:#A62D55;
 }
 
-.modal {
+.m-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -148,7 +147,7 @@ hr {
   margin-bottom: 15px;
 }
 
-.feed-main {
+.m-feed-main {
   color: #484848;
   font-weight: 100;
   font-family: Arial, Helvetica, sans-serif;
@@ -165,11 +164,11 @@ hr {
   margin: 10px;
 }
 
-.feed-review {
+.m-feed-review {
   
 }
 
-.close-button {
+.m-close-button {
   background: url(multiply.png) no-repeat;
   width: 32px;
   height: 32px;

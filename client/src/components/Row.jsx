@@ -3,7 +3,7 @@ import Review from './Review.jsx';
 
 function Row({reviews, handleReadMore}) {
   return (
-    <div className="row">
+    <div className="m-row">
       {
         reviews.map((review) => 
           <Review 

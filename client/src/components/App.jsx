@@ -53,7 +53,7 @@ class App extends React.Component {
     var reviewChunks = [[reviews[0], reviews[1]], [reviews[2], reviews[3]], [reviews[4], reviews[5]]]
     console.log(reviews.length)
     return (
-      <div className="review_container">
+      <div className="m-review_container">
         <h1>Reviews</h1>
         {
           reviewChunks.map((reviews) => 

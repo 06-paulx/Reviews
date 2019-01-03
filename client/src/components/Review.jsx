@@ -48,32 +48,32 @@ class Review extends React.Component {
     let view;
 
     if (expanded) {
-      view = <div className="review">
-        <div className="profile_photo">
+      view = <div className="m-review">
+        <div className="m-profile_photo">
           <img src={this.props.review.userphoto} id="user-photo"></img>
         </div>
-        <div className="user">
+        <div className="m-user">
           {this.props.review.user}
         </div>
-        <div className="date">
+        <div className="m-date">
           {this.time}
         </div>
-        <div className="text">
+        <div className="m-text">
           {this.props.review.review}
         </div>
       </div>
     } else {
-      view = <div className="review">
-        <div className="profile_photo">
+      view = <div className="m-review">
+        <div className="m-profile_photo">
           <img src={this.props.review.userphoto} id="user-photo"></img>
         </div>
-        <div className="user">
+        <div className="m-user">
           {this.props.review.user}
         </div>
-        <div className="date">
+        <div className="m-date">
           {this.time}
         </div>
-        <div className="text">
+        <div className="m-text">
           <p>{this.first}<span id="dots">...</span><span id='more_text'>{this.second}</span><button id="read_more_btn" onClick={this.handleReadMore.bind(this)}>Read More</button></p>
         </div>
       </div>
